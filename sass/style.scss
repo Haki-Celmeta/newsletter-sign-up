@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import 'mixFunc';
+@import 'variables';
 
 * {
   padding: 0;
@@ -9,4 +11,89 @@
   font-family: Roboto, sans-serif;
 }
 
+body {
+  height: 100vh;
+  @include displayFlex(row);
+  justify-content: center;
+  align-items: center;
+  background-color: $charcoal-grey;
+}
+
+.main-container {
+  @include displayFlex(row);
+  align-items: center;
+  background-color: #fff;
+  padding: 1.4rem;
+  border-radius: 24px;
+  width: 75%;
+}
+
+.main-container .text-part {
+  flex: 1;
+  padding-left: 2rem;
+  padding-right: 5rem;
+  color: $primary-dark-grey;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin-top: 0.8rem;
+  }
+
+  ul {
+    @include displayFlex(column);
+    gap: 12px;
+    padding: 1.8rem 0rem;
+
+    li {
+      @include displayFlex(row);
+      gap: 16px;
+    }
+  }
+
+  .email-container {
+    margin-top: 1rem;
+
+    form {
+      @include displayFlex(column);
+
+      label {
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+
+      input {
+        padding: $primary-padding;
+        border: 1px solid $grey-color;
+        border-radius: 8px;
+        margin-top: 0.8rem;
+      }
+
+      button {
+          background-color: $primary-dark-grey;
+          color: #fff;
+          margin-top: 1.4rem;
+          padding: $primary-padding;
+          border: none;
+          border-radius: 8px;
+      }
+    }
+  }
+}
+
+.main-container .illustration {
+  flex: 1;
+
+  img {
+    width: 80%;
+    float: right;
+  }
+}
+
+.message-container {
+  display: none;
+}
 

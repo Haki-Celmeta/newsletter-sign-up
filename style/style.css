@@ -7,3 +7,84 @@
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
 }
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(235, 18%, 26%);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  padding: 1.4rem;
+  border-radius: 24px;
+  width: 75%;
+}
+
+.main-container .text-part {
+  flex: 1;
+  padding-left: 2rem;
+  padding-right: 5rem;
+  color: hsl(234, 29%, 20%);
+}
+.main-container .text-part h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.main-container .text-part p {
+  margin-top: 0.8rem;
+}
+.main-container .text-part ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 1.8rem 0rem;
+}
+.main-container .text-part ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.main-container .text-part .email-container {
+  margin-top: 1rem;
+}
+.main-container .text-part .email-container form {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .text-part .email-container form label {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.main-container .text-part .email-container form input {
+  padding: 1rem 1.4rem;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 8px;
+  margin-top: 0.8rem;
+}
+.main-container .text-part .email-container form button {
+  background-color: hsl(234, 29%, 20%);
+  color: #fff;
+  margin-top: 1.4rem;
+  padding: 1rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.main-container .illustration {
+  flex: 1;
+}
+.main-container .illustration img {
+  width: 80%;
+  float: right;
+}
+
+.message-container {
+  display: none;
+}
