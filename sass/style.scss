@@ -58,9 +58,16 @@ body {
     form {
       @include displayFlex(column);
 
-      label {
+      .email-error {
+        @include displayFlex(row);
+        justify-content: space-between;
         font-size: 0.8rem;
         font-weight: 700;
+
+        .error {
+          display: none;
+          color: red;
+        }
       }
 
       input {
@@ -68,6 +75,8 @@ body {
         border: 1px solid $grey-color;
         border-radius: 8px;
         margin-top: 0.8rem;
+        outline: transparent;
+        cursor: pointer;
       }
 
       button {
@@ -77,6 +86,14 @@ body {
           padding: $primary-padding;
           border: none;
           border-radius: 8px;
+          transition: 0.2s;
+          cursor: pointer;
+      }
+      button:hover {
+        background-color: $tomato-color;
+      }
+      button:active {
+        opacity: 0.7;
       }
     }
   }

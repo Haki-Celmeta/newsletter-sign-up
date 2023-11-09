@@ -56,15 +56,24 @@ body {
   display: flex;
   flex-direction: column;
 }
-.main-container .text-part .email-container form label {
+.main-container .text-part .email-container form .email-error {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-size: 0.8rem;
   font-weight: 700;
+}
+.main-container .text-part .email-container form .email-error .error {
+  display: none;
+  color: red;
 }
 .main-container .text-part .email-container form input {
   padding: 1rem 1.4rem;
   border: 1px solid hsl(231, 7%, 60%);
   border-radius: 8px;
   margin-top: 0.8rem;
+  outline: transparent;
+  cursor: pointer;
 }
 .main-container .text-part .email-container form button {
   background-color: hsl(234, 29%, 20%);
@@ -73,6 +82,14 @@ body {
   padding: 1rem 1.4rem;
   border: none;
   border-radius: 8px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.main-container .text-part .email-container form button:hover {
+  background-color: hsl(4, 100%, 67%);
+}
+.main-container .text-part .email-container form button:active {
+  opacity: 0.7;
 }
 
 .main-container .illustration {
