@@ -20,6 +20,7 @@ body {
 .main-container {
   display: flex;
   flex-direction: row;
+  display: flex;
   align-items: center;
   background-color: #fff;
   padding: 1.4rem;
@@ -86,7 +87,7 @@ body {
   cursor: pointer;
 }
 .main-container .text-part .email-container form button:hover {
-  background-color: hsl(4, 100%, 67%);
+  background-color: rgb(255, 98, 87);
 }
 .main-container .text-part .email-container form button:active {
   opacity: 0.7;
@@ -101,7 +102,43 @@ body {
 }
 
 .message-container {
+  display: flex;
+  flex-direction: column;
   display: none;
+  gap: 16px;
+  background-color: #fff;
+  width: 30%;
+  padding: 2.4rem;
+  border-radius: 32px;
+}
+.message-container img {
+  width: 15%;
+}
+.message-container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+.message-container p {
+  font-size: 0.9rem;
+  color: hsl(234, 29%, 20%);
+}
+.message-container p strong {
+  font-weight: 700;
+}
+.message-container button {
+  background-color: hsl(234, 29%, 20%);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.7rem 0rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.message-container button:hover {
+  background-color: rgb(255, 98, 87);
 }
 
 @media (max-width: 775px) {

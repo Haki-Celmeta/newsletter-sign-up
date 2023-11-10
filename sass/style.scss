@@ -21,6 +21,7 @@ body {
 
 .main-container {
   @include displayFlex(row);
+  display: flex;
   align-items: center;
   background-color: #fff;
   padding: 1.4rem;
@@ -109,7 +110,47 @@ body {
 }
 
 .message-container {
+  @include displayFlex(column);
   display: none;
+  gap: 16px;
+  background-color: #fff;
+  width: 30%;
+  padding: 2.4rem;
+  border-radius: 32px;
+
+  img {
+    width: 15%;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $primary-dark-grey;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $primary-dark-grey;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  button {
+    background-color: $primary-dark-grey;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 0.7rem 0rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: $tomato-color;
+  }
 }
 
 @media (max-width: 775px) {

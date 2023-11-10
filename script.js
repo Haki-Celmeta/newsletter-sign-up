@@ -1,6 +1,8 @@
 const input = document.querySelector('#email');
 const error = document.querySelector('.error');
 const subscribeButton = document.querySelector('#subscribe-button');
+const mainContainer = document.querySelector('.main-container');
+const successMessage = document.querySelector('.message-container');
 
 const emailValidation =
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -16,7 +18,8 @@ function errorState() {
 
 subscribeButton.addEventListener('click', () => {
   if (input.value.match(emailValidation)) {
-    return 'it matches'
+    mainContainer.style.display = 'none';
+    successMessage.style.display = 'flex';
   } else {
     errorState();
   }
